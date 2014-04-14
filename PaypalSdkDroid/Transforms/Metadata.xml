@@ -1,0 +1,17 @@
+﻿<metadata>
+	<attr path="/api/package[@name='com.paypal.android.sdk']" name="managedName">PaypalSdkDroid</attr>
+	<attr path="/api/package[@name='com.paypal.android.sdk.payments']" name="managedName">PaypalSdkDroid.Payments</attr>
+	<attr path="/api/package[@name='io.card.payment']" name="managedName">PaypalSdkDroid.CardPayment</attr>
+
+	<attr path="/api/package[@name='com.paypal.android.sdk']/class[@name='aF']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.paypal.android.sdk.payments']/class[@name='PayPalService']/method[@name='onStartCommand']" name="managedReturn" >Android.App.StartCommandResult</attr>
+
+	<attr path="/api/package[@name='com.paypal.android.sdk']/class[@name='bI']/method[@name='c']" name="managedReturn" >global::Android.Widget.TextView[]</attr>
+
+	<remove-node path="/api/package[@name='com.paypal.android.sdk.payments']/class[@name='PayPalService']/method[@name='onStartCommand']" />
+	<remove-node path="/api/package[@name='com.paypal.android.sdk']/class[@name='Q']/method[@name='a' and count(parameter)=1]" />
+	<remove-node path="/api/package[@name='com.paypal.android.sdk']/class[@name='Q']/method[@name='b' and count(parameter)=1]" />
+
+	<remove-node path="/api/package[@name='com.paypal.android.sdk']/interface[@name='aK']/method[@name='a' and count(parameter)=1 and parameter[1][@type='java.lang.Enum']]" />
+	<remove-node path="/api/package[@name='com.paypal.android.sdk']/interface[@name='aK']/method[@name='a' and count(parameter)=2 and parameter[1][@type='java.lang.Enum']]" />
+</metadata>

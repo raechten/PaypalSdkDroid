@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A7DA0EA-9408-4DAA-BCB6-8D9CCCAF9E27}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PaypalSdkDroid</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>PaypalSdkDroid</AssemblyName>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Additions\PayPalService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
+    <None Include="JavaDocs\allclasses-frame.html" />
+    <None Include="JavaDocs\allclasses-noframe.html" />
+    <None Include="JavaDocs\constant-values.html" />
+    <None Include="JavaDocs\deprecated-list.html" />
+    <None Include="JavaDocs\help-doc.html" />
+    <None Include="JavaDocs\index-all.html" />
+    <None Include="JavaDocs\overview-tree.html" />
+    <None Include="JavaDocs\package-list" />
+    <None Include="JavaDocs\stylesheet.css" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalAuthorization.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalConfiguration.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalFuturePaymentActivity.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalPayment.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalPaymentDetails.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PayPalService.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\PaymentActivity.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\package-frame.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\package-summary.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\package-tree.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\package-use.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalAuthorization.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalConfiguration.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalFuturePaymentActivity.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalPayment.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalPaymentDetails.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PayPalService.html" />
+    <None Include="JavaDocs\com\paypal\android\sdk\payments\class-use\PaymentActivity.html" />
+    <None Include="JavaDocs\resources\inherit.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Xamarin.Android.Bindings.targets" />
+  <ItemGroup>
+    <Folder Include="Transforms\" />
+    <Folder Include="Jars\x86\" />
+    <Folder Include="Jars\mips\" />
+    <Folder Include="Jars\armeabi-v7a\" />
+    <Folder Include="Jars\armeabi\" />
+    <Folder Include="JavaDocs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\PayPalAndroidSDK.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedNativeLibrary Include="Jars\x86\libcardioDecider.so" />
+    <EmbeddedNativeLibrary Include="Jars\mips\libcardioDecider.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libcardioDecider.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libcardioRecognizer.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libcardioRecognizer_tegra2.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libopencv_core.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libopencv_imgproc.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi\libcardioDecider.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <JavaDocIndex Include="JavaDocs\index.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <JavaDocPaths>JavaDocs</JavaDocPaths>
+  </PropertyGroup>
+</Project>

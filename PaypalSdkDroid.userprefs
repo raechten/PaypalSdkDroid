@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SamplePaypalSdkDroid/MainActivity.cs">
+    <Files>
+      <File FileName="PaypalSdkDroid/Additions/AboutAdditions.txt" Line="1" Column="1" />
+      <File FileName="PaypalSdkDroid/Additions/PayPalService.cs" Line="1" Column="1" />
+      <File FileName="SamplePaypalSdkDroid/MainActivity.cs" Line="20" Column="43" />
+      <File FileName="SamplePaypalSdkDroid/Resources/values/Strings.xml" Line="1" Column="1" />
+      <File FileName="SamplePaypalSdkDroid/Properties/AndroidManifest.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SamplePaypalSdkDroid MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" AndroidDeviceId-Debug="192.168.56.101:5555" />
+</Properties>
